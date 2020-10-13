@@ -1,7 +1,7 @@
 var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
-const port = 8080
+const port = process.env.PORT ||8080
 const cors = require('cors')
 
 // app.get('/', (req, res) => {
