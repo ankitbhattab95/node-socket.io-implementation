@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Button, Form, FormControl } from 'react-bootstrap';
 import classes from './App.module.css'
 import io from 'socket.io-client'
-const endPoint = `${process.env.REACT_APP_WS_HOST}${(process.env.NODE_ENV === "production") ?
-  null : ':'+process.env.REACT_APP_LOCAL_PORT}`
+const endPoint = process.env.REACT_APP_WS_HOST
+
 const socket = io(endPoint)
 
 console.log('WS endPoint -------', endPoint)
