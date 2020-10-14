@@ -2,8 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Button, Form, FormControl } from 'react-bootstrap';
 import classes from './App.module.css'
 import io from 'socket.io-client'
-const socket = io("http://localhost:8080/")
+const endPoint = `${process.env.REACT_APP_WS_HOST}:${process.env.PORT || process.env.REACT_APP_LOCAL_PORT}`
+const socket = io(endPoint)
 
+console.log('WS endPoint -------', endPoint)
 
 function App() {
   const [message, setMessage] = useState("");

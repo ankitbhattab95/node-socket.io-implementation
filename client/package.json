@@ -16,6 +16,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "local": "npm start : .env",
+    "buildLocal": "npm run build : .env.production.local",
+    "buildProd": "npm run build : .env.production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
