@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "startProd": "NODE_ENV=production npm start"
+    "startProd": "NODE_ENV=production npm start",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run buildProd --prefix client"
   },
   "author": "",
   "license": "ISC",
